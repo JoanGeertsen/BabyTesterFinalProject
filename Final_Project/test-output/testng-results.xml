@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-06T11:36:00 ART" name="Default suite" finished-at="2023-10-06T11:36:12 ART" duration-ms="11431">
+  <suite started-at="2023-10-20T10:25:54 ART" name="Default suite" finished-at="2023-10-20T10:26:08 ART" duration-ms="13760">
     <groups>
     </groups>
-    <test started-at="2023-10-06T11:36:00 ART" name="Default test" finished-at="2023-10-06T11:36:12 ART" duration-ms="11431">
+    <test started-at="2023-10-20T10:25:54 ART" name="Default test" finished-at="2023-10-20T10:26:08 ART" duration-ms="13760">
       <class name="Tests.GoogleSearchBar">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.GoogleSearchBar@639c2c1d]" started-at="2023-10-06T11:36:00 ART" name="setup" finished-at="2023-10-06T11:36:04 ART" duration-ms="4042" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tests.GoogleSearchBar@639c2c1d]" started-at="2023-10-20T10:25:54 ART" name="setup" finished-at="2023-10-20T10:25:59 ART" duration-ms="4695" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TestSearchSuggestions()[pri:0, instance:Tests.GoogleSearchBar@639c2c1d]" started-at="2023-10-06T11:36:04 ART" name="TestSearchSuggestions" finished-at="2023-10-06T11:36:11 ART" duration-ms="6908" status="PASS">
+        <test-method signature="TestSearchSuggestions()[pri:0, instance:Tests.GoogleSearchBar@639c2c1d]" started-at="2023-10-20T10:25:59 ART" name="TestSearchSuggestions" finished-at="2023-10-20T10:26:08 ART" duration-ms="8509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSearchSuggestions -->
-        <test-method is-config="true" signature="close()[pri:0, instance:Tests.GoogleSearchBar@639c2c1d]" started-at="2023-10-06T11:36:11 ART" name="close" finished-at="2023-10-06T11:36:12 ART" duration-ms="403" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:Tests.GoogleSearchBar@639c2c1d]" started-at="2023-10-20T10:26:08 ART" name="close" finished-at="2023-10-20T10:26:08 ART" duration-ms="466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

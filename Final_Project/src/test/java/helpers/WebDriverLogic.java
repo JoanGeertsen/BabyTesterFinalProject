@@ -14,4 +14,9 @@ public class WebDriverLogic {
 	public void openUrl(String url) {
 		driver.get(url);
 	}
+	
+	public void tearDown() {
+		driver.manage().deleteAllCookies();
+		driver.quit();
+	}
 }

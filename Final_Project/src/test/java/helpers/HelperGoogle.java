@@ -24,24 +24,21 @@ public class HelperGoogle{
 	
 	public void printList(List<WebElement> listToPrint){	
 		index++;
-		for(int i=0; i<10; i++) {
-			String toPrint= listToPrint.get(i).getText();
-			System.out.println(toPrint);
-			if(index == 1)
-				stringList1.add(toPrint);
-			else
-				stringList2.add(toPrint);
-		}
+		for (WebElement element : listToPrint) {
+	        String toPrint = element.getText();
+	        System.out.println(toPrint);
+
+	        if (index == 1) 
+	            stringList1.add(toPrint);
+	        else 
+	            stringList2.add(toPrint);	        
+	    }
 	}
 	
 	public boolean noMatchBetweenLists() {
-		boolean noMatch=true;
-		for(int i=0; i<10 && noMatch; i++) {
-			for(int j=0; j<10 && noMatch; j++) {
-				if(stringList1.get(i).equals(stringList2.get(j)))
-					noMatch=false;				
-			}
-		}
-		return noMatch;
+		for (String item : stringList1)
+	        if (stringList2.contains(item)) 
+	            return false; 	        
+	    return true;
 	}
 }

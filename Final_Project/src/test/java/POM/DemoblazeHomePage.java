@@ -16,15 +16,19 @@ public class DemoblazeHomePage extends Base {
 		click(productLocator);
 	}
 	
-	public void clickPhoneButton() {
-		click(phonesButton);
+	public void chooseCategory(String category) {
+		switch (category) {
+	    case "laptops":
+	    	click(laptopsButton);
+	        break;
+	    case "phones":
+	    	click(phonesButton);
+	        break;
+	    case "monitors":
+	    	click(monitorsButton);
+	        break;
+	    default:	        
+	        break;
+		}        
 	}
-	
-	public void clickLaptopButton() {
-		click(laptopsButton);
-	}
-	
-	public void clickMonitorButton() {
-		click(monitorsButton);
-	}	
 }

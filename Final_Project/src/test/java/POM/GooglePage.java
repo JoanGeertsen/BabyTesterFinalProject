@@ -27,7 +27,6 @@ public class GooglePage extends Base {
 	}
 	
 	public List<WebElement> getSuggestions(){
-		if(isDisplayed(suggestions));
 			return findElements(suggestions);
 	}	
 }

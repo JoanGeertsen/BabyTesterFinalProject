@@ -32,7 +32,7 @@ public class Purchase {
 		homePage = new DemoblazeHomePage(driver);
 		cartPage = new DemoblazeCartPage(driver);
 		navbar = new DemoblazeNavbar(driver);
-		helper = new HelperPurchase(homePage, cartPage);
+		helper = new HelperPurchase(cartPage);
 	}
 	
 	@Given("I am on the home page")
@@ -40,9 +40,9 @@ public class Purchase {
 			driverLogic.openUrl("https://demoblaze.com/index.html");
 	}	
 	
-	@When("I add a {string} from the {string} page to the cart")
+	@And("I add a {string} from the {string} page to the cart")
 		public void addProductToCart(String product, String category) {
-			helper.clickCategory(category);
+			homePage.chooseCategory(category);
 			homePage.clickProduct(product);
 			Assert.assertTrue(productPage.getCurrentUrl().contains("prod"));
 			productPage.clickAddButton();
@@ -50,16 +50,14 @@ public class Purchase {
 			navbar.clickHomeButton();
 	}
 	
-	@And("complete the purchase")
+	@When("complete the purchase")
 		public void completePurchase() {
 			navbar.clickCartButton();
 			Assert.assertTrue(cartPage.getCurrentUrl().contains("cart"));
-			cartPage.clickPlaceOrder();
 			helper.fillPlaceOrder();
-			cartPage.clickPurchase();
 	}
 	
-	@Then("I should get a message with a confirmaion")
+	@Then("I should get a message with a confirmation")
 	public void checkConfirmation() {
 		Assert.assertTrue(cartPage.getConfirmation());
 		WebElement purchaseInfo = cartPage.getPurchaseInfo();
@@ -68,7 +66,6 @@ public class Purchase {
 	
 	@After
 	public void close() {
-		driver.manage().deleteAllCookies();
-		driver.quit();
+		driverLogic.tearDown();
 	}	
 }

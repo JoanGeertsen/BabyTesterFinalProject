@@ -31,12 +31,13 @@ public abstract class Base {
 	}
 	
 	public List<WebElement> findElements(By locator){
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 		return driver.findElements(locator);
 	}
 	
 	public void type(String text, By locator) {
 		WebElement element = findElement(locator);
-		element.sendKeys(text);		
+		element.sendKeys(text);
 	}	
 	
 	public boolean isDisplayed(By locator) {
